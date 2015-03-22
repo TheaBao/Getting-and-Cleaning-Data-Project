@@ -33,4 +33,4 @@ levels(dataset$activity) <- activ.lables$V2
 ##  for each activity and each subject.
 library(dplyr)
 tidy_dataset<-summarise_each(group_by(dataset, subjects, activity), "mean")
-write.table(tidy_dataset, file = "./UCI HAR Dataset/tidy_data.txt")
+write.table(tidy_dataset, file = "./UCI HAR Dataset/tidy_data.txt", row.name=False)
